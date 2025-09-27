@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: rgb(0, 0, 16);">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="../imagens/logotipo.jpg" alt="logotipo" width="60px" height="50px"></a>
+              <div class="justify-content-center">
+                <p style="font-family: Montserrat, sans-serif; color: rgb(234, 31, 11); padding-top: 20px; font-size: large;">ED7 <span style="color: rgb(241, 124, 4);">Hamburgueria
+                </span></p>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <button class="nav-link" href="#" style="font-family: Amatic SC" onclick="toggleCart()">Meu Carrinho <i class="bi bi-cart2"></i></button>
+                  </li>
+  
+                </ul>
+              </div>
+            </div>
+          </nav>    
+    </header>
+    <main>
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+      
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../imagens/carrossel_1.jpg" alt="Los Angeles" class="d-block w-100" style="height: 60vh;">
+          </div>
+          <div class="carousel-item">
+            <img src="../imagens/carrossel_2.jpg" alt="Chicago" class="d-block w-100" style="height: 60vh;">
+          </div>
+          <div class="carousel-item">
+            <img src="../imagens/carrossel_3.jpg" alt="New York" class="d-block w-100" style="height: 60vh;">
+          </div>
+        </div>
+      
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+
+      <div class="row" style="background-color: #161515;">
+        <div style="padding-top: 2vh; padding-bottom: 2vh; background-color: rgb(211, 31, 31); text-align: center;">
+          <h1 style="font-family: Irish Grover; font-weight: bolder;">Cardápio</h1>
+        </div>
+        <div class="container mt-3 col-sm-4 burger">
+
+          <!--Card 1-->
+          <div class="card" style="width: 30vh; margin: auto;">
+            <img class="card-img-top" src="../imagens/b1.jpg" alt="Card image" style="width:30vh">
+            <div class="card-body">
+              <h4 class="card-title">Brie Burguer</h4>
+              <p class="card-text" style="text-align: justify;">Pão da Casa, Maionese Verde, Hambúrguer, Queijo Muçarela, Queijo Brie, Geleia de Pimenta e Rúcula.</p>
+              <p><strong>R$ 32,00</strong></p>
+              <button onclick="addToCart('Brie Burguer', 32)" class="btn btn-primary">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </div>
+        
+        <!--Card 2-->
+        <div class="container mt-3 col-sm-4 burger">
+          <div class="card" style="width: 30vh; margin: auto;">
+            <img class="card-img-top" src="../imagens/b2.jpg" alt="Card image" style="width:30vh">
+            <div class="card-body">
+              <h4 class="card-title">Carne e Queijo</h4>
+              <p class="card-text">Pão e Maionese da Casa, Hambúrguer e Queijo Muçarela derretido.
+              </p>
+              <p><strong>R$ 24,00</strong></p>
+              <button onclick="addToCart('Carne e Queijo', 24)" class="btn btn-primary">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 3-->
+        <div class="container mt-3 col-sm-4 burger">
+          <div class="card" style="width: 30vh; margin: auto;">
+            <img class="card-img-top" src="../imagens/b3.jpg" alt="Card image" style="width:30vh">
+            <div class="card-body">
+              <h4 class="card-title">Catupiry com Bacon</h4>
+              <p class="card-text">Pão da Casa, Molho de Tomate, Hambúrguer, Catupiry e Bacon crocante.</p>
+              <p><strong>R$ 28,00</strong></p>
+              <button onclick="addToCart('Catupiry com Bacon', 28)" class="btn btn-primary">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 4-->
+        <div class="container mt-3 col-sm-4 burger">
+          <div class="card" style="width: 30vh; margin: auto;">
+            <img class="card-img-top" src="../imagens/b4.jpg" alt="Card image" style="width:30vh">
+            <div class="card-body">
+              <h4 class="card-title">Cheddar</h4>
+              <p class="card-text">Pão Australiano, Maionese da Casa, Hambúrguer, Cheddar, Cebola caramelizada e Bacon crocante.</p>
+              <p><strong>R$ 29,00</strong></p>
+              <button onclick="addToCart('Cheddar', 29)" class="btn btn-primary">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 5-->
+        <div class="container mt-3 col-sm-4 burger">
+          <div class="card" style="width: 30vh; margin: auto;">
+            <img class="card-img-top" src="../imagens/b5.jpg" alt="Card image" style="width:30vh">
+            <div class="card-body">
+              <h4 class="card-title">Cheeseburger</h4>
+              <p class="card-text">Pão e Maionese da Casa, Hambúrguer prensado e Queijo Cheddar derretido.</p>
+              <p><strong>R$ 22,00</strong></p>
+              <button onclick="addToCart('Cheeseburger', 22)" class="btn btn-primary">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 6-->
+        <div class="container mt-3 col-sm-4 burger">
+          <div class="card" style="width: 30vh; margin: auto;">
+            <img class="card-img-top" src="../imagens/b6.jpg" alt="Card image" style="width:30vh">
+            <div class="card-body">
+              <h4 class="card-title">Costela</h4>
+              <p class="card-text">Pão e Maionese da Casa, Bacon crocante, Hambúrguer de Costela, Queijo Provolone, Molho Barbecue e Cebola Roxa.</p>
+              <p><strong>R$ 33,00</strong></p>
+              <button onclick="addToCart('Costela', 33)" class="btn btn-primary">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 7-->
+        <div class="container mt-3 col-sm-4 burger">
+          <div class="card" style="width: 30vh; margin: auto;">
+            <img class="card-img-top" src="../imagens/b7.jpg" alt="Card image" style="width:30vh">
+            <div class="card-body">
+              <h4 class="card-title">Duplo Bacon</h4>
+              <p class="card-text">Pão da Casa, Molho de Queijo, dois Hambúrgueres, Queijo Prato, Ketchup e Bacon em tiras.</p>
+              <p><strong>R$ 31,00</strong></p>
+              <button onclick="addToCart('Duplo Bacon', 31)" class="btn btn-primary">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 8-->
+        <div class="container mt-3 col-sm-4 burger">
+          <div class="card" style="width: 30vh; margin: auto;">
+            <img class="card-img-top" src="../imagens/b8.jpg" alt="Card image" style="width:30vh">
+            <div class="card-body">
+              <h4 class="card-title">Fraldinha na Mostarda</h4>
+              <p class="card-text">Pão e Maionese da Casa, Hambúrguer de Fraldinha, Queijo Muçarela, Molho de Mostarda e Rúcula.</p>
+              <p><strong>R$ 34,00</strong></p>
+              <button onclick="addToCart('Fraldinha na Mostarda', 34)" class="btn btn-primary">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 9-->
+        <div class="container mt-3 col-sm-4 burger">
+          <div class="card" style="width: 30vh; margin: auto;">
+            <img class="card-img-top" src="../imagens/b9.jpg" alt="Card image" style="width:30vh">
+            <div class="card-body">
+              <h4 class="card-title">Quatro Queijos</h4>
+              <p class="card-text">Pão da Casa, Molho de Tomate, Hambúrguer coberto com os queijos Muçarela, Provolone, Catupiry e Gorgonzola.
+              </p>
+              <p><strong>R$ 32,00</strong></p>
+              <button onclick="addToCart('Quatro Queijos', 32)" class="btn btn-primary">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 10-->
+        <div class="container mt-3 col-sm-4 burger">
+          <div class="card" style="width: 30vh; margin: auto;">
+            <img class="card-img-top" src="../imagens/b10.jpg" alt="Card image" style="width:30vh">
+            <div class="card-body">
+              <h4 class="card-title">Salmão</h4>
+              <p class="card-text">Pão da Casa, Maionese de Ervas Finas, Hambúrguer de Salmão, Molho Tarê, Cream Cheese e Cebolinha.</p>
+              <p><strong>R$ 36,00</strong></p>
+              <button onclick="addToCart('Salmão', 36)" class="btn btn-primary">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 11-->
+        <div class="container mt-3 col-sm-4 burger">
+          <div class="card" style="width: 30vh; margin: auto;">
+            <img class="card-img-top" src="../imagens/b11.jpg" alt="Card image" style="width:30vh">
+            <div class="card-body">
+              <h4 class="card-title">Especial da Casa</h4>
+              <p class="card-text">Pão da Casa, Maionese de Bacon, Hambúrguer, Queijo Muçarela, Cebola Roxa, Alface e Tomate.</p>
+              <p><strong>R$ 27,00</strong></p>
+              <button onclick="addToCart('Especial da Casa', 27)" class="btn btn-primary">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 12-->
+        <div class="container mt-3 col-sm-4 burger">
+          <div class="card" style="width: 30vh; margin: auto;">
+            <img class="card-img-top" src="../imagens/b12.jpg" alt="Card image" style="width:30vh">
+            <div class="card-body">
+              <h4 class="card-title">Smash Salada</h4>
+              <p class="card-text">Pão Especial, Maionese da Casa, Hambúrguer prensado, Queijo Cheddar, Alface e Tomate.</p>
+              <p><strong>R$ 25,00</strong></p>
+              <button onclick="addToCart('Smash Salada', 25)" class="btn btn-primary">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 13-->
+        <div class="container mt-3 col-sm-4 burger">
+          <div class="card" style="width: 30vh; margin: auto;">
+            <img class="card-img-top" src="../imagens/b13.jpg" alt="Card image" style="width:30vh">
+            <div class="card-body">
+              <h4 class="card-title">Brasileiro</h4>
+              <p class="card-text">1 Hambúrguer, 1 Porção de Batata frita + 1 Guaraná lata.</p>
+              <p><strong>R$ 35,00</strong></p>
+              <button onclick="addToCart('Brasileiro', 35)" class="btn btn-primary">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 14-->
+        <div class="container mt-3 col-sm-4 burger">
+          <div class="card" style="width: 30vh; margin: auto;">
+            <img class="card-img-top" src="../imagens/b14.jpg" alt="Card image" style="width:30vh">
+            <div class="card-body">
+              <h4 class="card-title">Bem Solteiro</h4>
+              <p class="card-text">1 Hambúrguer, Batata frita, molho da casa + 1 Coca-Cola lata.</p>
+              <p><strong>R$ 39,00</strong></p>
+              <button onclick="addToCart('Bem Solteiro', 39)" class="btn btn-primary">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 15-->
+        <div class="container mt-3 col-sm-4 burger">
+          <div class="card" style="width: 30vh; margin: auto;">
+            <img class="card-img-top" src="../imagens/b15.jpg" alt="Card image" style="width:30vh">
+            <div class="card-body">
+              <h4 class="card-title">Bem Casado</h4>
+              <p class="card-text">2 Hambúrgueres, 2 porções de batata frita + 1 Coca Cola de 1L.</p>
+              <p><strong>R$ 65,00</strong></p>
+              <button onclick="addToCart('Bem Casado', 65)" class="btn btn-primary">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </main>
+
+  <!-- Carrinho -->
+  <div id="cart" class="cart" style=" text-align: center; width: 300px; margin: auto;" >
+    <h2>🛒 Meu Carrinho</h2>
+    <ul id="cart-items"></ul>
+    <p><strong>Total: R$ <span id="cart-total">0.00</span></strong></p>
+    <button onclick="fazerPedido()" style="margin-bottom: 10px;">Fazer Pedido</button>
+  </div>
+
+  <script src="carrinho.js"></script>
+
+
+    
+</body>
+</html>
